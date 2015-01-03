@@ -32,7 +32,7 @@
 				color:#ddd;
 			}
 		</style>
-		<script src="https://maps.googleapis.com/maps/api/js"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAcrhmhTPIJscS4Gh0Rph2EUVhi_bZfNi4"></script>
     </head>
 
     <body>
@@ -96,13 +96,8 @@
 				<li class="location">
 					<span class="st_link">Location<span class="st_arrow_down"></span></span>
 					<div class="st_about st_thumbs_wrapper">
-						<div class="st_subcontent_map">
-							<p>
-								I am alone, and feel the charm of existence in this spot,
-								which was created for the bliss of souls like mine. I am
-								so happy, my dear friend, so absorbed in the exquisite sense
-								of mere tranquil existence, that I neglect my talents.
-							</p>
+						<div class="st_subcontent_map" id="st_subcontent_map">
+							<p></p>
 						</div>
 					</div>
 				</li>
@@ -227,11 +222,11 @@
 					});
 				}
 				$(".location").click(function(){
-					alert("opa");
-				    var mapCanvas = document.getElementById('st_overlay');
+				    var mapCanvas = document.getElementById('st_subcontent_map');
 				    var mapOptions = {
-				      center: new google.maps.LatLng(44.5403, -78.5463),
-				      zoom: 8,
+				      center: new google.maps.LatLng(45.079, 14.1545),
+				      zoom: 13,
+				      zoomControl:true,
 				      mapTypeId: google.maps.MapTypeId.ROADMAP
 				    }
 				    var map = new google.maps.Map(mapCanvas, mapOptions);
