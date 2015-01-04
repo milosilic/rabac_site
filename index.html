@@ -95,7 +95,7 @@
 				</li>
 				<li class="location">
 					<span class="st_link">Location<span class="st_arrow_down"></span></span>
-					<div class="st_about st_thumbs_wrapper">
+					<div class="st_location st_thumbs_wrapper">
 						<div class="st_subcontent_map" id="st_subcontent_map">
 							<p></p>
 						</div>
@@ -161,6 +161,12 @@
 					$elem.addClass('current').animate({'height':'170px'},200);
 					var $thumbs_wrapper = $this.parent().next();
 					$thumbs_wrapper.show(200);
+					
+					if ( $(this).parent().parent().hasClass('location'))
+					{
+						openMap();
+					}
+
 				});
 				$list.find('.st_arrow_up').live('click',function(){
 					var $this = $(this);
@@ -221,16 +227,22 @@
 						$outer.scrollLeft(left);
 					});
 				}
-				$(".location").click(function(){
+				function openMap(){
 				    var mapCanvas = document.getElementById('st_subcontent_map');
 				    var mapOptions = {
-				      center: new google.maps.LatLng(45.079, 14.1545),
-				      zoom: 13,
-				      zoomControl:true,
+				      center: new google.maps.LatLng(45.0794, 14.1545),
+				      zoom: 14,
+					  panControl:true,
+					  zoomControl:true,
+					  mapTypeControl:true,
+					  scaleControl:true,
+					  streetViewControl:true,
+					  overviewMapControl:true,
+					  rotateControl:true,    
 				      mapTypeId: google.maps.MapTypeId.ROADMAP
 				    }
 				    var map = new google.maps.Map(mapCanvas, mapOptions);
-                });
+                };
             });
         </script>
     </body>
