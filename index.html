@@ -229,8 +229,9 @@
 				}
 				function openMap(){
 				    var mapCanvas = document.getElementById('st_subcontent_map');
+				    var myLatlng = new google.maps.LatLng(45.07987899, 14.15443808);
 				    var mapOptions = {
-				      center: new google.maps.LatLng(45.0794, 14.1545),
+				      center: myLatlng,
 				      zoom: 14,
 					  panControl:true,
 					  zoomControl:true,
@@ -242,6 +243,11 @@
 				      mapTypeId: google.maps.MapTypeId.ROADMAP
 				    }
 				    var map = new google.maps.Map(mapCanvas, mapOptions);
+				    var marker = new google.maps.Marker({
+				        position: myLatlng,
+		                map: map,
+			            title: 'Rudarska 15'
+  });
                 };
             });
         </script>
