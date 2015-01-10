@@ -16,7 +16,7 @@ h1{
 .center{
 	text-align: center;
 }
-input{
+input, textarea{
  margin: 0 auto;
  width:100%;	
 }
@@ -135,6 +135,7 @@ ul.st_navigation li span.st_arrow_up{
 .st_subcontent_map{
 	background:#000;
 	padding:50px;
+	margin-left: 200px;
 	height: 400px;
 	width: 400px;
 	-moz-box-shadow:0px 0px 10px #000;

@@ -94,8 +94,8 @@
 				<li class="location">
 					<span class="st_link">Location<span class="st_arrow_down"></span></span>
 					<div class="st_location st_thumbs_wrapper">
-						<div class="st_subcontent_map" id="st_subcontent_map">
-							<p></p>
+						<div class="st_subcontent_form" >
+							<div class="st_subcontent_map" id="st_subcontent_map"/>
 						</div>
 					</div>
 				</li>
@@ -105,18 +105,20 @@
 						<div class="st_subcontent_form" id="st_subcontent_form">
 							<h1 class="center">Booking</h1>
 							<div class="booking_inner">
-						    	<div class="left_side">
-						    		<label>Your name</label>
-						    		<label>Email</label>
-						    		<label>Contact phone</label>
-						    		<label>Booking details</label>
-						    	</div>
-						    	<div class="right_side">
-									<input type="text" placeholder="Your name"/><br/>
-									<input type="text" placeholder="your@email.address"/><br/>
-									<input type="text" placeholder="Contact phone"/><br/>
-									<input type="text" placeholder="Booking details"/><br/>
-						    	</div>
+					    		<label>Your name</label>
+								<input type="text" placeholder="Your name"/><br/>
+					    		<label>Email</label>
+								<input type="text" placeholder="your@email.address"/><br/>
+					    		<label>Contact phone</label>
+								<input type="text" placeholder="Contact phone"/><br/>
+					    		<label>Booking details</label>
+								<textarea id="message" name="message" class="inplaceError"  autocomplete="off"></textarea><br/>
+						        <div>
+						            <span class="">
+						                <a  href="javascript:void(0);">Send</a>
+						            </span>
+								</div>
+
 							</div>
 						</div>
 					</div>
@@ -126,7 +128,7 @@
 
         <div>
             <span class="reference">
-                <a href="http://tympanus.net/codrops/2010/07/28/thumbnails-navigation-gallery/">back to the Codrops tutorial</a>
+                <a href="http://tympanus.net/codrops/2010/07/29/thumbnails-navigation-gallery/">back to the Codrops tutorial</a>
 				<a href="http://www.flickr.com/photos/markjsebastian/">Photos by Mark Sebastian</a>
             </span>
 		</div>
@@ -156,7 +158,7 @@
 				//calculates the width of the div element 
 				//where the thumbs are going to be displayed
 				buildThumbs();
-				
+
 				function buildThumbs(){
 					$list.children('li.album').each(function(){
 						var $elem 			= $(this);
