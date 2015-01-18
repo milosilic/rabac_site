@@ -11,7 +11,7 @@
 		<script src="js/cufon-yui.js" type="text/javascript"></script>
 		<script src="js/Quicksand_Book_400.font.js" type="text/javascript"></script>
 		<script type="text/javascript">
-			Cufon.replace('span,p,h1',{
+			Cufon.replace('span,p,h1,h2',{
 				textShadow: '0px 0px 1px #ffffff'
 			});
 		</script>
@@ -92,11 +92,18 @@
 					</div>
 				</li>
 				<li class="location">
-					<span class="st_link">Location<span class="st_arrow_down"></span></span>
+					<span class="st_link">Location & Contact<span class="st_arrow_down"></span></span>
 					<div class="st_booking st_thumbs_wrapper">
-						<div class="st_subcontent_form" >
-							<div class="st_subcontent_map" id="st_subcontent_map"/>
-						</div>
+						<div id="locationMainFieldContainer">
+							<div id="locationDetailsContainer" class="separatorWV">
+								<h2 class="center">Rudarska 15, Rabac, Croatia</h2>
+								<h2 class="center">Phone : +38552872069</h2>
+							</div>
+							<div id="locationMapContainer" class="st_subcontent_form" >
+								<div class="st_subcontent_map" id="st_subcontent_map" ></div>
+							</div>
+							
+						</div>						
 					</div>
 				</li>
 				<li class="booking">
@@ -250,6 +257,7 @@
 					});
 				}
 				function openMap(){
+					$("#st_subcontent_map").height( $('.st_location').height()- 100);
 				    var mapCanvas = document.getElementById('st_subcontent_map');
 				    var myLatlng = new google.maps.LatLng(45.07987899, 14.15443808);
 				    var mapOptions = {
