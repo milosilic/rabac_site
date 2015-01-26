@@ -91,15 +91,15 @@
 						</div>
 					</div>
 				</li>
-				<li class="location">
+				<li class="location" contenteditable="true">
 					<span class="st_link">Location & Contact<span class="st_arrow_down"></span></span>
 					<div class="st_booking st_thumbs_wrapper">
 						<div id="locationMainFieldContainer">
 							<div id="locationDetailsContainer" class="separatorWV">
-								<h2 class="center">Rudarska 15, Rabac, Croatia</h2>
+								<h2 class="center" >Rudarska 15, Rabac, Croatia</h2>
 								<h2 class="center">Phone : +38552872069</h2>
 								<h2 class="center">Gps coordinates:</h2>
-								<h2 class="center">Latitude</h2>
+								<h2 class="center">Latitude:</h2>
 								<h2 class="center">Longitude: </h2>
 							</div>
 							<div id="locationMapContainer" class="st_subcontent_form" >
@@ -279,7 +279,8 @@
 				    var marker = new google.maps.Marker({
 				        position: myLatlng,
 		                map: map,
-			            title: 'Rudarska 15'
+			            title: 'Rudarska 15',
+			            icon: 'images/icons/gmap_marker.png'
   });
                 };
             });
